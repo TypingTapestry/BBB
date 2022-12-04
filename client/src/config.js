@@ -1,4 +1,4 @@
-let BASE_URL = "https://byebyebytes.herokuapp.com/";
+let BASE_URL = "https://byebyebytes.up.railway.app/";
 if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
   BASE_URL = "http://localhost:4000/";
 }
