@@ -1,4 +1,4 @@
-import { Card, Stack, Typography } from "@mui/material";
+import { Card, Divider, Stack, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { getPosts } from "../api/posts";
 import { isLoggedIn } from "../helpers/authHelper";
@@ -37,14 +37,15 @@ const TopPosts = () => {
   }, []);
 
   return (
-    <Stack spacing={2}>
-      <Card>
-        <HorizontalStack>
-          <BsFillPencilFill />
-          <Typography>Quick Tips for Writing Your Bytes</Typography>
+    <Card>
+      <Stack spacing={2}>
+        <HorizontalStack justifyContent="space-between">
+          <HorizontalStack>
+            <BsFillPencilFill />
+            <Typography>Quick Tips for Writing Your Bytes</Typography>
+          </HorizontalStack>
         </HorizontalStack>
-      </Card>
-      <Card>
+        <Divider />
         <HorizontalStack>
           <Typography variant="subtitle" color="text.secondary">
             "I am saying goodbye because..."<br /><br />
@@ -55,8 +56,8 @@ const TopPosts = () => {
             "I will always remember..."
           </Typography>
         </HorizontalStack>
-      </Card>
-    </Stack>
+      </Stack>
+    </Card>
   );
 };
 
